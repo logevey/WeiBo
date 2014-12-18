@@ -1,7 +1,7 @@
 <?php
 include ("connectMysql.php");
 if (isset ( $_POST ['submit'] ) && $_POST ['submit']) {
-	$sql = "select * from user where uName='" . $_POST [username] . "'";
+	$sql = "select * from user where uName='" . $_POST ['username'] . "'";
 	$rs = mysql_query ( $sql );
 	if ($rs) {
 		if ($row = mysql_fetch_array ( $rs )) {

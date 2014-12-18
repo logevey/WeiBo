@@ -2,7 +2,9 @@
 include ("connectMysql.php");
 session_start ();
 if (isset ( $_POST ['submit'] ) && $_POST ['submit']) {
-	$sql = "select * from user where uName='" . $_POST [username] . "' and uPasswd='" . $_POST [password] . "'";
+	echo $_POST['username'];
+	echo $_POST['password'];
+	$sql = "select * from user where uName='".$_POST ['username']."' and uPasswd='".$_POST['password']."'";
 	$rs = mysql_query ( $sql );
 	if ($rs) {
 		if ($row = mysql_fetch_array ( $rs )) {

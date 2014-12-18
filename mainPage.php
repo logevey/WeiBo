@@ -278,7 +278,7 @@ jQuery(document).ready(function($) {
 							</div>";
 				} else {
 					echo "<div class=\" div7\" style=\"top:" . $top . "px\">
-								<div class=\"div7-1\"><br/>" . $row ['wTransmitUserName'] . "</div>
+								<div class=\"div7-1\"><br/>" . $row ['wUserName'] . "</div>
 								<div class=\"div7-2\">
 									<div class=\"div7-2-1\"><br/>&nbsp &nbsp &nbsp &nbsp [转发自  " . $row ['wTransmitUserName'] . "  ]&nbsp &nbsp" . $row ['wContent'] . "</div>
 									<div class=\"div7-2-2\"><br/>" . $row ['wTime'] . "</div>
@@ -292,7 +292,7 @@ jQuery(document).ready(function($) {
 					echo "</div></div>
 								<div class=\"div7-3\">
 									<div class=\"div7-3-1\"><br/><a class=\" btn-large \" href=\"transmitWeibo.php?wID='{$id}'\">转 发</a></div>
-									<div class=\"div7-3-2\"><br/><a  class=\" btn-large theme-comment\" href=\"javascript:;\">评 论</a></div>
+									<div class=\"div7-3-2\"><br/><a  class=\" btn-large theme-comment\" onclick=\"clickme(" . $id . ")\" href=\"javascript:;\">评 论</a></div>
 								</div>
 							</div>";
 				}

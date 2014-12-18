@@ -10,7 +10,7 @@ if (! isset ( $_SESSION ['currentuser'] )) {
 	$sql1 = "select * from weibo where wID={$wID}";
 	$result1 = mysql_query ( $sql1 ) or die ( "Could not query: " . mysql_error () );
 	if ($row1 = mysql_fetch_array ( $result1 )) {
-		$sql = "insert into weibo(wUserName,wContent,wTime,wIsTransmit,wTransmitUserName) values('" . $row1 ['wUserName'] . "','" . $row1 ['wContent'] . "','" . $time . "','1','{$user}')";
+		$sql = "insert into weibo(wUserName,wContent,wTime,wIsTransmit,wTransmitUserName) values('{$user}','" . $row1 ['wContent'] . "','" . $time . "','1','" . $row1 ['wUserName'] . "')";
 		$result = mysql_query ( $sql ) or die ( "Could not query: " . mysql_error () );
 		if ($result) {
 			echo '<script language="JavaScript">location.href="mainPage.php";</script>';
